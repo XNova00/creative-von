@@ -2,78 +2,86 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#212529",
-      contrastText: "#FBF9F9",
-    },
-    secondary: {
-      main: "#FBF9F9",
-      contrastText: "#212529",
-    },
+      main: "#F9F4EF",
+    }
   },
   typography: {
     h1: {
-      fontFamily: "Inter, sans-serif",
-      fontSize: "52px",
+      fontFamily: "Quattrocento, sans-serif",
+      fontSize: "64px",
       fontStyle: "normal",
-      fontWeight: 500,
-      color: "#FBF9F9",
+      fontWeight: 700,
+      color: "#020826",
+      "@media (max-width:899px)": {
+        fontSize: "40px",
+      },
+    },
+    h2: {
+      fontFamily: "Quattrocento, sans-serif",
+      fontSize: "48px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      color: "#020826",
+      "@media (max-width:600px)": {
+        fontSize: "40px",
+      },
+    },
+    h3: {
+      fontFamily: "Quattrocento, sans-serif",
+      fontSize: "40px",
+      fontStyle: "normal",
+      fontWeight: 700,
+      color: "#020826",
       "@media (max-width:600px)": {
         fontSize: "32px",
       },
     },
-    h2: {
-      fontFamily: "Inter, sans-serif",
+    h4: {
+      fontFamily: "Quattrocento, sans-serif",
       fontSize: "32px",
       fontStyle: "normal",
-      fontWeight: 400,
-      color: "#FBF9F9",
+      fontWeight: 700,
+      color: "#020826",
       "@media (max-width:600px)": {
         fontSize: "24px",
       },
     },
-    h3: {
-      fontFamily: "Inter, sans-serif",
-      fontSize: "24px",
-      fontStyle: "normal",
-      fontWeight: 500,
-      color: "#FBF9F9",
-    },
 
     body1: {
-      fontFamily: "Inter, sans-serif",
-      fontSize: "18px",
+      fontFamily: "Quattrocento Sans, sans-serif",
+      fontSize: "24px",
       fontStyle: "normal",
       fontWeight: 400,
-      color: "#FBF9F9",
+      color: "#716040",
       "@media (max-width:600px)": {
         fontSize: "16px",
       },
     },
     body2: {
-      fontFamily: "Inter, sans-serif",
+      fontFamily: "Quattrocento Sans, sans-serif",
       fontSize: "18px",
       fontStyle: "normal",
-      fontWeight: 600,
+      fontWeight: 400,
+      color: "#716040",
       "@media (max-width:600px)": {
         fontSize: "16px",
       },
     },
 
     body3: {
-      fontFamily: "Inter, sans-serif",
+      fontFamily: "Quattrocento Sans, sans-serif",
       fontSize: "14px",
       fontStyle: "normal",
       fontWeight: 400,
+      color: "#716040",
     },
 
     myCustomButton: {
-      fontFamily: "Inter, sans-serif",
-      fontSize: "18px",
+      fontFamily: "Quattrocento Sans, sans-serif",
+      fontSize: "15px",
       fontStyle: "normal",
-      fontWeight: 500,
-      "@media (max-width:600px)": {
-        fontSize: "16px",
-      },
+      fontWeight: 700,
+      color: "#FFFFFE",
     },
   },
   components: {
@@ -85,9 +93,25 @@ export const theme = createTheme({
           "&.MuiPaper-elevation3": {},
           "&.MuiPaper-elevation4": {
             boxShadow: "none",
-            padding: "24px 0",
+            padding: "24px 200px",
+            backgroundColor: "transparent",
+            "@media only screen and (max-width: 1200px)": {
+              padding: "48px",
+            },
+            "@media only screen and (max-width: 599px)": {
+              padding: "16px",
+            },
           },
           "&.MuiPaper-elevation5": {},
+        },
+      },
+    },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          "&.MuiToolbar-root": {
+            padding: "0",
+          },
         },
       },
     },

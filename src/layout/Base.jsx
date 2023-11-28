@@ -9,12 +9,12 @@ import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import Toolbar from "@mui/material/Toolbar";
 import { navItems } from "../utils/data";
-import { Link } from "react-router-dom";
-import { LogoSvg, MenuIcon } from "./IconSvgComponent";
+import { Link, Outlet } from "react-router-dom";
+import { LogoSvg, MenuIcon } from "../components/IconSvgComponent";
 
 const drawerWidth = 240;
 
-function AppbarComponent(props) {
+function Base(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -48,7 +48,7 @@ function AppbarComponent(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-      <Box sx={{ display: "flex" }}>
+      <Box>
         <CssBaseline />
         <AppBar component="nav">
           <Toolbar>
@@ -61,7 +61,7 @@ function AppbarComponent(props) {
             >
               <MenuIcon />
             </IconButton>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", sm: "flex" } }}>
+            <Box sx={{display: { xs: "none", sm: "flex" }, justifyContent: "space-between", flexGrow: 1, }}>
               <LogoSvg />
             </Box>
             <Box sx={{ display: { xs: "none", sm: "flex" }, gap: "24px" }}>
@@ -93,15 +93,19 @@ function AppbarComponent(props) {
             {drawer}
           </Drawer>
         </nav>
-        {/* <Box component="main">
-        <Toolbar />
+        <Box component="main" sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          px: { xs: "16", sm: "48px", lg: "200px" },
+          height: "100vh",
+        }}>
         <Outlet />
-      </Box> */}
+      </Box>
       </Box>
   );
 }
-
-AppbarComponent.propTypes = {
+Base.propTypes = {
   /**
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
@@ -109,4 +113,4 @@ AppbarComponent.propTypes = {
   window: PropTypes.func,
 };
 
-export default AppbarComponent;
+export default Base;

@@ -12,11 +12,14 @@ import {
   MuiIcon,
   ReactIcon,
 } from "../components/IconSvgComponent";
+import AboutPage from "../pages/AboutPage";
+import HomePage from "../pages/HomePage";
+import ProjectPage from "../pages/ProjectPage";
 
 export const navItems = [
-  { id: 1, title: "Home", path: "/" },
-  { id: 2, title: "About", path: "/about" },
-  { id: 3, title: "Project", path: "/project" },
+  { id: 1, title: "Home", path: "/", page: <HomePage />,},
+  { id: 2, title: "About", path: "/about", page: <AboutPage /> },
+  { id: 3, title: "Project", path: "/project", page: <ProjectPage /> },
 ];
 
 export const techStackIcons = [
