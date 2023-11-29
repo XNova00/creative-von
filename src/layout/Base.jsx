@@ -12,6 +12,7 @@ import { navItems } from "../utils/data";
 import { Link, Outlet } from "react-router-dom";
 import { LogoSvg, MenuIcon } from "../components/IconSvgComponent";
 
+
 const drawerWidth = 240;
 
 function Base(props) {
@@ -94,15 +95,17 @@ function Base(props) {
           </Drawer>
         </nav>
         <Box component="main" sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          px: { xs: "16", sm: "48px", lg: "200px" },
-          height: "100vh",
+           display: "flex",
+           flexDirection: "column",
+           alignItems: "center",
+           justifyContent: "center",
+          px: { xs: "16px", sm: "48px", md: "0px" },
+          height: "100vh",  
         }}>
         <Outlet />
+        </Box>
       </Box>
-      </Box>
+      
   );
 }
 Base.propTypes = {

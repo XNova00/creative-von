@@ -2,7 +2,10 @@ import { createTheme } from "@mui/material";
 export const theme = createTheme({
   palette: {
     primary: {
-      main: "#F9F4EF",
+      main: "#020826",
+    },
+    background: {
+      default: "#F9F4EF",
     }
   },
   typography: {
@@ -14,6 +17,9 @@ export const theme = createTheme({
       color: "#020826",
       "@media (max-width:899px)": {
         fontSize: "40px",
+      },
+      "@media (max-width:360px)": {
+        fontSize: "32px",
       },
     },
     h2: {
@@ -75,14 +81,6 @@ export const theme = createTheme({
       fontWeight: 400,
       color: "#716040",
     },
-
-    myCustomButton: {
-      fontFamily: "Quattrocento Sans, sans-serif",
-      fontSize: "15px",
-      fontStyle: "normal",
-      fontWeight: 700,
-      color: "#FFFFFE",
-    },
   },
   components: {
     MuiPaper: {
@@ -93,7 +91,7 @@ export const theme = createTheme({
           "&.MuiPaper-elevation3": {},
           "&.MuiPaper-elevation4": {
             boxShadow: "none",
-            padding: "24px 200px",
+            padding: "24px 100px",
             backgroundColor: "transparent",
             "@media only screen and (max-width: 1200px)": {
               padding: "48px",
@@ -111,6 +109,20 @@ export const theme = createTheme({
         root: {
           "&.MuiToolbar-root": {
             padding: "0",
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          "&.MuiButton-containedSizeLarge": {
+            fontFamily: "Quattrocento Sans, sans-serif",
+            fontSize: "15px",
+            fontStyle: "normal",
+            fontWeight: 700,
+            backgroundColor: "#8C7851",
+            color: "#FFFFFE",
           },
         },
       },

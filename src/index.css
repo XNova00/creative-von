@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Quattrocento:wght@700&display=swap');
-body,
-:root
- {
-  height: 100%;
-  background-color: #F9F4EF !important;
-}
+
 a{
   text-decoration: none;
   color: #020826;
-  font-size: 24px;
+  font-size: 18px;
+  font-weight: 600;
   font-family: 'Quattrocento Sans', sans-serif;
 }
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  /* Center slide text vertically */
+  width: 1240px !important;
+}
+

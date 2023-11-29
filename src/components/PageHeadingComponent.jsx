@@ -5,10 +5,11 @@ const PageHeadingComponent = ({
   subheading,
   variant,
   subheading2,
+  sx
 }) => {
   const theme = useTheme();
   return (
-    <Stack spacing={"8px"}>
+    <Stack spacing={"24px"} sx={sx}>
       <Typography variant={variant}> {pageTitle} </Typography>
       <Typography variant="body1">{subheading}</Typography>
       <Typography variant="body1">{subheading2}</Typography>
